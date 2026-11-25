@@ -1,4 +1,6 @@
 pluginManagement {
+    // Los convention plugins (portfolio.*) se compilan desde build-logic.
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -22,5 +24,12 @@ dependencyResolutionManagement {
     }
 }
 
+// Permite escribir projects.apps.expenses.domain en lugar de project(":apps:expenses:domain").
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "android-portfolio"
-include(":app")
+
+// App Gastos (com.kevabin.expenses)
+include(":apps:expenses:app")
+include(":apps:expenses:domain")
+include(":apps:expenses:data")

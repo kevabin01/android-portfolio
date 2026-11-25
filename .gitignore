@@ -10,6 +10,10 @@
 /.idea/assetWizardSettings.xml
 .DS_Store
 /build
+# Salidas de compilación de cualquier módulo (apps/*, build-logic, core/*)
+build/
+# Datos de sesión del compilador de Kotlin 2.x
+.kotlin/
 /captures
 .externalNativeBuild
 .cxx
