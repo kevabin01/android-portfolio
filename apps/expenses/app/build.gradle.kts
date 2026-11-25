@@ -1,25 +1,19 @@
 plugins {
-    alias(libs.plugins.android.application)
+    // SDKs, Java 17 y test runner vienen del convention plugin (build-logic).
+    alias(libs.plugins.portfolio.android.application)
 }
 
 android {
-    namespace = "com.kevabin.android_portfolio"
-    compileSdk {
-        version = release(37)
+    namespace = "com.kevabin.expenses"
+
+    defaultConfig {
+        applicationId = "com.kevabin.expenses"
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildFeatures {
         viewBinding = true
-    }
-
-    defaultConfig {
-        applicationId = "com.kevabin.android_portfolio"
-        minSdk = 26
-        targetSdk = 37
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -30,13 +24,12 @@ android {
             }
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
 }
 
 dependencies {
+    implementation(projects.apps.expenses.domain)
+    implementation(projects.apps.expenses.data)
+
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)

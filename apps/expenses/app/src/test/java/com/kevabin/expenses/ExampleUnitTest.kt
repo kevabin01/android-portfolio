@@ -1,4 +1,4 @@
-package com.kevabin.android_portfolio
+package com.kevabin.expenses
 
 import org.junit.Test
 

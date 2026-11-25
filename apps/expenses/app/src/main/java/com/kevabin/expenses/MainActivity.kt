@@ -1,11 +1,11 @@
-package com.kevabin.android_portfolio
+package com.kevabin.expenses
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.kevabin.android_portfolio.databinding.ActivityMainBinding
+import com.kevabin.expenses.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
